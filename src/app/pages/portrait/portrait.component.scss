@@ -1,0 +1,32 @@
+
+.intro{
+    height: 100vh;
+}
+
+.intro video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.intro h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: black;
+    text-shadow: 3px 4px 7px rgba(185,185,185,0.8);
+}
+
+section{
+    height: 100vh;
+    color: black;
+}
+
+section h1{
+    padding-top: 300px;
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 3px 4px 7px rgba(185,185,185,0.8);
+}
