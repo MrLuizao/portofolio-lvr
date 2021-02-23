@@ -10,11 +10,34 @@ import * as ScrollMagic from 'scrollmagic';
 
 export class PortraitComponent implements OnInit {
 
+  appear: any
+  // scrollTop: any
+
   constructor() { }
 
   ngOnInit() {
     this.scrollinVideo();
-    this.showMenuInScroll();
+    
+    // this.appear = document?.querySelectorAll('.appear')
+
+    // this.showMenuInScroll();
+
+    // window.addEventListener('scroll', this.showMenuInScroll);
+  }
+
+  showMenuInScroll(){
+    
+    let scrollTop = document.documentElement.scrollTop;
+
+    for( var i=0; i<this.appear.length; i++){
+      let heigtAppear = this.appear[i].offsetTop;
+
+      if(heigtAppear - 100 < scrollTop){
+        this.appear[i].style.opacity = 1;
+      }
+
+    }
+    
   }
 
   scrollinVideo(){
@@ -40,7 +63,7 @@ export class PortraitComponent implements OnInit {
 
 
     const textAnim = TweenMax.fromTo(text, 3, {opacity: 0}, {opacity:1})
-
+    
     let scene2 =  new ScrollMagic.Scene({
       duration: 3000,
       triggerElement: intro,
@@ -66,8 +89,6 @@ export class PortraitComponent implements OnInit {
     
   }
   
-  showMenuInScroll(){
 
-  }
 
 }
