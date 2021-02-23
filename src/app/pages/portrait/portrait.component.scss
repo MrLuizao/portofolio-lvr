@@ -10,23 +10,66 @@
 }
 
 .intro h1{
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 5rem;
-    color: black;
-    text-shadow: 3px 4px 7px rgba(185,185,185,0.8);
+    color: white;
+    background: black;
+    width: 100%;
+    text-align: center;
+    filter: drop-shadow(2px 4px 6px black);
+    
 }
 
-section{
-    height: 100vh;
-    color: black;
-}
+// section{
+//     height: 100vh;
+//     color: black;
+// }
 
 section h1{
+    color: black;
     padding-top: 300px;
     text-align: center;
     font-size: 5rem;
     text-shadow: 3px 4px 7px rgba(185,185,185,0.8);
 }
+
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 200vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+////TEST MENU LKY/////
+
+
+
+//////////////////////

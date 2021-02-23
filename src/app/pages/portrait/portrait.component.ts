@@ -14,6 +14,7 @@ export class PortraitComponent implements OnInit {
 
   ngOnInit() {
     this.scrollinVideo();
+    this.showMenuInScroll();
   }
 
   scrollinVideo(){
@@ -63,6 +64,10 @@ export class PortraitComponent implements OnInit {
       
     }, 150)  
     
+  }
+  
+  showMenuInScroll(){
+
   }
 
 }
