@@ -6,17 +6,11 @@
 .intro video{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    // object-fit: cover;
 }
 
 
 .intro h1{
-
-    // color: black;
-    // text-shadow: 3px 4px 7px rgba(185,185,185,0.8);
-    // font-weight: 100;
-    // font-size: 3rem;
-
     color: red;
     font-weight: bold;
     font-size: 16rem;
@@ -70,57 +64,87 @@ section h1{
     display: none;
 }
 
-
-////TEST MENU LKY/////
-
 nav {
-background: #f9f9f9;
+    background: RED;
+    width: 15rem;
+    margin: 5rem;
+    text-align: end;
 
-    .menuItems {
+    .menu-item {
         list-style: none;
-        display: flex;
+        display: block;
 
         li {
-        margin: 50px;
+        padding: 5px;
+        text-shadow: 3px 4px 7px rgba(111,111,111,0.5);
 
-        a {
-            text-decoration: none;
-            color: #8f8f8f;
-            font-size: 24px;
-            font-weight: 400;
-            transition: all 0.5s ease-in-out;
-            position: relative;
-            text-transform: uppercase;
-
-            &::before {
-            content: attr(data-item);
-            transition: 0.5s;
-            color: red;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 0;
-            overflow: hidden;
+            a {
+                font-size: 26px;
+                text-decoration: none;
+                color: black;
+                position: relative;
+                text-transform: uppercase;
             }
 
-            &:hover {
-            &::before {
-                width: 100%;
-                transition: all 0.5s ease-in-out;
+            a:hover{
+                text-decoration: line-through;
+                text-decoration-color: white;
             }
-            }
-        }
         }
     }
 }
 
-.nav-vertical{
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    height: 100vh;
+.scroll-indicator {
+
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&::after {
+		animation: arrow 2s infinite ease-in-out;
+		animation-delay: .75s;
+		border-bottom: 1px solid RED;
+		border-right: 1px solid RED;
+        border-width: thick;
+        height: 2rem;
+		opacity: .25;
+		transform: rotate(45deg);
+        width: 2rem;
+	}
 
 }
 
-//////////////////////
+@keyframes arrow {
+	0% {
+		transform: scale(.75) rotate(45deg);
+		opacity: .25;
+	}
+	25% {
+		transform: scale(1) rotate(45deg);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.75) rotate(45deg);
+		opacity: .25;
+	}
+}
+
+.scroll-indicator h6{
+    font-weight: 400;
+    text-align: center; 
+}
+
+.txt-to-right{
+    margin-right: -2rem;
+}
+
+
+
